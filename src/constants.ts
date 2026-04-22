@@ -48,7 +48,7 @@ export const APPS: AppConfig[] = [
   },
   {
     id: 'habitrac',
-    name: 'HabiTrac AI',
+    name: 'HabiTrac',
     description: 'Advanced behavioral analysis and habit-forming productivity workbench.',
     icon: CheckCircle,
     url: 'https://habitrac.netlify.app/',

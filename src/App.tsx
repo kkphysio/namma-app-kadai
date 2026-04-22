@@ -54,7 +54,7 @@ const Sidebar = ({ currentAppId }: { currentAppId?: string }) => {
             <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg">
               <LayoutDashboard className="text-indigo-600 w-5 h-5" />
             </div>
-            <span className="font-black text-white tracking-tighter text-lg">AI SUITE</span>
+            <span className="font-black text-white tracking-tighter text-lg uppercase">Namma App Kadai</span>
           </motion.div>
         )}
         <button 
@@ -89,10 +89,7 @@ const Sidebar = ({ currentAppId }: { currentAppId?: string }) => {
             href={app.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn(
-              "flex items-center gap-3 px-4 py-3 rounded-2xl transition-all group relative",
-              "text-indigo-100 hover:text-white hover:bg-indigo-800"
-            )}
+            className="flex items-center gap-3 px-4 py-3 rounded-2xl transition-all group relative text-indigo-100 hover:text-white hover:bg-indigo-800"
           >
             <app.icon size={20} className="transition-transform group-hover:scale-110" />
             {isOpen && <span className="truncate">{app.name}</span>}
@@ -108,19 +105,12 @@ const DashboardOverview = () => {
   return (
     <div className="p-12 max-w-7xl mx-auto flex flex-col items-center">
       <header className="mb-16 text-center">
-        <motion.div 
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="inline-block px-4 py-1 bg-indigo-500 rounded-full text-[10px] font-bold tracking-widest uppercase mb-6 shadow-lg border border-indigo-400 text-white"
-        >
-          Portfolio Hub
-        </motion.div>
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-7xl font-black text-white mb-4 tracking-tighter"
+          className="text-7xl font-black text-white mb-4 tracking-tighter uppercase"
         >
-          AI STUDIO SUITE
+          Namma App Kadai
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
