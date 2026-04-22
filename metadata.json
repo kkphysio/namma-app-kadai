@@ -1,0 +1,6 @@
+{
+  "name": "AI Studio Multi-App Hub",
+  "description": "A unified dashboard to access and manage multiple Google AI Studio applications from a single interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
