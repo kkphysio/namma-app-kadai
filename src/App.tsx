@@ -21,7 +21,8 @@ import {
   ChevronRight,
   Monitor,
   Smartphone,
-  Globe
+  Globe,
+  Activity
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { APPS, AppConfig } from './constants';
@@ -89,7 +90,9 @@ const Sidebar = ({ currentAppId }: { currentAppId?: string }) => {
             href={app.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-3 rounded-2xl transition-all group relative text-indigo-100 hover:text-white hover:bg-indigo-800"
+            className={cn(
+              "flex items-center gap-3 px-4 py-3 rounded-2xl transition-all group relative text-indigo-100 hover:text-white hover:bg-indigo-800"
+            )}
           >
             <app.icon size={20} className="transition-transform group-hover:scale-110" />
             {isOpen && <span className="truncate">{app.name}</span>}
@@ -118,11 +121,11 @@ const DashboardOverview = () => {
           transition={{ delay: 0.1 }}
           className="text-indigo-100 text-xl font-medium opacity-90"
         >
-          Four powerful neural engines, one unified dashboard.
+          {APPS.length} powerful neural engines, one unified dashboard.
         </motion.p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         {APPS.map((app, index) => (
           <motion.div
             key={app.id}
@@ -141,7 +144,8 @@ const DashboardOverview = () => {
                 app.color === 'rose' && "bg-rose-500 text-white",
                 app.color === 'cyan' && "bg-cyan-500 text-white",
                 app.color === 'amber' && "bg-amber-400 text-amber-950",
-                app.color === 'emerald' && "bg-emerald-500 text-white"
+                app.color === 'emerald' && "bg-emerald-500 text-white",
+                app.color === 'violet' && "bg-violet-500 text-white"
               )}>
                 <div className={cn(
                   "w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-inner",
@@ -155,7 +159,8 @@ const DashboardOverview = () => {
                   app.color === 'rose' && "text-rose-50",
                   app.color === 'cyan' && "text-cyan-50",
                   app.color === 'amber' && "text-amber-900",
-                  app.color === 'emerald' && "text-emerald-50"
+                  app.color === 'emerald' && "text-emerald-50",
+                  app.color === 'violet' && "text-violet-50"
                 )}>
                    {app.description}
                 </p>
@@ -164,7 +169,8 @@ const DashboardOverview = () => {
                   app.color === 'rose' && "text-rose-600",
                   app.color === 'cyan' && "text-cyan-600",
                   app.color === 'amber' && "text-amber-600",
-                  app.color === 'emerald' && "text-emerald-600"
+                  app.color === 'emerald' && "text-emerald-600",
+                  app.color === 'violet' && "text-violet-600"
                 )}>
                   Launch Engine
                 </div>
@@ -210,7 +216,8 @@ const AppView = ({ app }: { app: AppConfig }) => {
              app.color === 'rose' && "bg-rose-500",
              app.color === 'cyan' && "bg-cyan-500",
              app.color === 'amber' && "bg-amber-400 text-amber-950",
-             app.color === 'emerald' && "bg-emerald-500"
+             app.color === 'emerald' && "bg-emerald-500",
+             app.color === 'violet' && "bg-violet-500"
           )}>
             <app.icon size={24} />
           </div>

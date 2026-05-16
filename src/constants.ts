@@ -1,15 +1,10 @@
 import { 
   Bot, 
-  Sparkles, 
-  Zap, 
-  Brain, 
   LayoutDashboard, 
-  Globe, 
-  ExternalLink, 
   Home,
   TrendingUp,
-  Coins,
-  CheckCircle
+  CheckCircle,
+  Activity
 } from 'lucide-react';
 
 export interface AppConfig {
@@ -39,19 +34,19 @@ export const APPS: AppConfig[] = [
     color: 'cyan',
   },
   {
-    id: 'yield-bridge',
-    name: 'YieldBridge',
-    description: 'Intelligent asset allocation and decentralized yield monitoring platform.',
-    icon: Coins,
-    url: 'https://yeildbridge.netlify.app/',
-    color: 'amber',
-  },
-  {
     id: 'habitrac',
     name: 'HabiTrac',
     description: 'Advanced behavioral analysis and habit-forming productivity workbench.',
     icon: CheckCircle,
     url: 'https://habitrac.netlify.app/',
     color: 'emerald',
+  },
+  {
+    id: 'foliopulse',
+    name: 'FolioPulse',
+    description: 'Real-time portfolio performance tracking and dynamic volatility monitoring.',
+    icon: Activity,
+    url: 'https://foliopulse.netlify.app/',
+    color: 'violet',
   },
 ];
